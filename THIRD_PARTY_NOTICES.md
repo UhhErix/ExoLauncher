@@ -24,7 +24,7 @@ The source for every build of these programs that Exo ships is published at the 
 | .NET runtime (self-contained) | 10 | MIT |
 | Windows App SDK (WinUI) | 2.x | Microsoft Software License Terms |
 | Microsoft Edge WebView2 SDK | 1.0.4314.35 | BSD-3-Clause |
-| [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) C API (`sherpa-onnx-c-api.dll`) with [ONNX Runtime](https://github.com/microsoft/onnxruntime) (`onnxruntime.dll`), from the org.k2fsa.sherpa.onnx.runtime.win-x64 package, for Only My Voice and dictation | 2.0.1 (ONNX Runtime 1.31.1, from the Microsoft.ML.OnnxRuntime package) | Apache-2.0 (sherpa-onnx), MIT (ONNX Runtime) |
+| [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) C API (`sherpa-onnx-c-api.dll`) with [ONNX Runtime](https://github.com/microsoft/onnxruntime) (`onnxruntime.dll`), from the org.k2fsa.sherpa.onnx.runtime.win-x64 package, for Only My Voice | 2.0.1 (ONNX Runtime 1.31.1, from the Microsoft.ML.OnnxRuntime package) | Apache-2.0 (sherpa-onnx), MIT (ONNX Runtime) |
 | Microsoft.Data.Sqlite | 10.0.14 | MIT |
 | SQLitePCLRaw | 3.0.5 | Apache-2.0 |
 | SQLite | bundled with SQLitePCLRaw | Public domain |
@@ -34,6 +34,7 @@ The source for every build of these programs that Exo ships is published at the 
 | Opus (Xiph.Org, `opus.dll`), with Exo's one fix, an unclipped two-channel downmix (`voice/opus-downmix.patch`) | 1.6.1 | BSD-3-Clause |
 | webrtc-audio-processing (freedesktop.org's copy of WebRTC's audio processing; its AEC3 echo canceller in calls, built into `exo_apm.dll`), with the code it carries: Ooura's and Mark Olesen's FFTs, pffft, rnnoise and spl_sqrt_floor, each under its own permissive license | 2.1 | BSD-3-Clause |
 | Abseil C++ (Google, linked into `exo_apm.dll`) | 20240722.0 | Apache-2.0 |
+| [DeepFilterNet](https://github.com/Rikorose/DeepFilterNet) 3 (Hendrik Schröter): `exo-deepfilter.dll`, Exo's build of its C interface, libDF, with the low-latency model and the Rust crates it links (tract, ndarray and the rest, each MIT or Apache-2.0); noise suppression in Discord calls. Its license texts ship beside it (`LICENSE-deepfilternet-mit.txt`, `LICENSE-deepfilternet-apache.txt`) | 0.5.6 | MIT or Apache-2.0 |
 | React, React DOM | 19.3.1 | MIT |
 | clsx | 2.1.1 | MIT |
 | qrcode-generator (Kazuhiko Arase), the Discord sign-in code | 2.0.4 | MIT |
@@ -55,16 +56,14 @@ Devices' USB port line follows the idea of [CPU Direct USB](https://github.com/M
 
 ## Downloaded by Exo
 
-Exo does not ship these in its installer file; it downloads a fixed release and checks its size and SHA-256 first (the frame generation mods: their newest release, checked against the SHA-256 GitHub publishes for it). Exo's setup fetches the store tools, DeepFilterNet and the two NVIDIA models while it installs; the upscaler files come only for a game that ships them, and the frame generation mods only for a game you turn frame generation on in. The store tools run as their own programs.
+Exo does not ship these in its installer file; it downloads a fixed release and checks its size and SHA-256 first (the frame generation mods: their newest release, checked against the SHA-256 GitHub publishes for it). Exo's setup fetches the store tools and the two NVIDIA models while it installs; the upscaler files come only for a game that ships them, and the frame generation mods only for a game you turn frame generation on in. The store tools run as their own programs.
 
 | Tool | Used for | License |
 | --- | --- | --- |
 | [Legendary](https://github.com/derrod/legendary) | Epic Games library, installs and launches | GPL-3.0 |
 | [gogdl](https://github.com/Heroic-Games-Launcher/heroic-gogdl) | GOG library, installs and launches | GPL-3.0 |
 | [Nile](https://github.com/imLinguin/nile) | Amazon Games library, installs and launches | GPL-3.0 |
-| [DeepFilterNet](https://github.com/Rikorose/DeepFilterNet) 3 (Hendrik Schröter), 0.5.6: `exo-deepfilter.dll`, Exo's build of its C interface, libDF, with the low-latency model and the Rust crates it links (tract, ndarray and the rest, each MIT or Apache-2.0), from Exo's own GitHub release | Noise suppression in Discord calls and dictation | MIT or Apache-2.0 |
 | [TitaNet-small](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/nemo/models/titanet_small) (NVIDIA NeMo) as sherpa-onnx publishes it in ONNX: `titanet_small.onnx`, from [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx)'s release, checked against its size and SHA-256 | Only My Voice in Discord calls | CC-BY-4.0 |
-| [Parakeet TDT 0.6B v3](https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3) (NVIDIA NeMo) as sherpa-onnx publishes it in ONNX with int8 weights: `encoder.int8.onnx`, `decoder.int8.onnx`, `joiner.int8.onnx` and `tokens.txt`, unpacked from [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx)'s asr-models release, each checked against its size and SHA-256 | Dictation, the mic in Exo's text boxes | CC-BY-4.0 |
 | NVIDIA DLSS, AMD FidelityFX / FSR, Intel XeSS files, from each vendor's own GitHub release | Upscaler updates, only for files a game already ships | DLSS: [NVIDIA RTX SDKs License](https://github.com/NVIDIA/DLSS/blob/main/LICENSE.txt); FidelityFX / FSR: [AMD's FidelityFX SDK license](https://github.com/GPUOpen-LibrariesAndSDKs/FidelityFX-SDK/blob/main/docs/license.md); XeSS: [Intel Simplified Software License](https://github.com/intel/xess/blob/main/LICENSE.txt) (October 2022), in full below |
 | [MFG Unlocker](https://github.com/dashdogy/MFG-Unlocker) (dashdogy), its newest release: `MFGUnlocker.dll` | NVIDIA's own frame generation on GeForce RTX 20 and 30, and 3x and 4x on RTX 40, only in a game you turn it on for, placed in that game's folder | MIT; it embeds programs derived from Intel's XeSS SDK under Intel's terms, and Dear ImGui, MinHook and Ultimate ASI Loader under theirs |
 | [OptiScaler](https://github.com/optiscaler/OptiScaler), its newest release: its loader, and from what that release carries, AMD's FidelityFX loader and frame generation, Nukem's [dlssg-to-fsr3](https://github.com/Nukem9/dlssg-to-fsr3) and, on a Radeon or Intel Arc, [fakenvapi](https://github.com/optiscaler/fakenvapi) and Intel XeSS, with the release's own license files | FSR frame generation where NVIDIA's can't run, only in a game you turn it on for, placed in that game's folder | OptiScaler: GPL-3.0; dlssg-to-fsr3: GPL-3.0 source, its build as Nukem publishes it; fakenvapi: MIT; FidelityFX: [AMD's FidelityFX SDK license](https://github.com/GPUOpen-LibrariesAndSDKs/FidelityFX-SDK/blob/main/docs/license.md); XeSS: Intel Simplified Software License, in full below |

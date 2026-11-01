@@ -1,10 +1,10 @@
 <p align="center"><img src="docs/media/logo.png" alt="Exo" width="88"></p>
-<h1 align="center">Exo Launcher 3.20</h1>
+<h1 align="center">Exo Launcher 3.21</h1>
 <p align="center"><strong>Every game store, Discord, your music, your captures and your mouse in one app for Windows 11.</strong></p>
 
 <p align="center">
   <a href="https://github.com/UhhErix/ExoLauncher/releases/latest/download/ExoLauncher-Setup.exe"><strong>Download for Windows 11</strong></a>
-  · <a href="https://github.com/UhhErix/ExoLauncher/releases/tag/v3.20.0">What's new in 3.20</a>
+  · <a href="https://github.com/UhhErix/ExoLauncher/releases/tag/v3.21.0">What's new in 3.21</a>
   · <a href="CHANGELOG.md">Changelog</a>
   · <a href="PRIVACY.md">Privacy</a>
   · <a href="LICENSE">License</a>
@@ -16,11 +16,11 @@
 
 | File | Version | SHA-256 |
 | --- | --- | --- |
-| [ExoLauncher-Setup.exe](https://github.com/UhhErix/ExoLauncher/releases/download/v3.20.0/ExoLauncher-Setup.exe) | 3.20.0 | `a4b08421ee073a1211a11c5d393df36edcd462afc4b32200d8badc78eff5be1e` |
+| [ExoLauncher-Setup.exe](https://github.com/UhhErix/ExoLauncher/releases/download/v3.21.0/ExoLauncher-Setup.exe) | 3.21.0 | `ff8898ee3d87fdec2dec232d62cae6b27e7af9b80e86eb1a49fe13bc2c73329b` |
 
 **Requirements:** Windows 11 x64. Installs for your Windows user only, in `%LOCALAPPDATA%\ExoLauncher\app`, with no administrator rights.
 
-**Check your download.** The installer isn't code-signed yet, so Windows SmartScreen may warn the first time (choose **More info**, then **Run anyway**). Before you run it, check that its hash matches the one above and on the [release page](https://github.com/UhhErix/ExoLauncher/releases/tag/v3.20.0):
+**Check your download.** The installer isn't code-signed yet, so Windows SmartScreen may warn the first time (choose **More info**, then **Run anyway**). Before you run it, check that its hash matches the one above and on the [release page](https://github.com/UhhErix/ExoLauncher/releases/tag/v3.21.0):
 
 ```powershell
 Get-FileHash .\ExoLauncher-Setup.exe -Algorithm SHA256
@@ -160,7 +160,7 @@ Your mouse's page is **Exo Mouse**, which talks to your mouse directly over USB,
 
 ![Settings: a floating panel over the room you were in](docs/media/settings.jpg)
 
-One page that floats over the room you were in: appearance (Match Windows, Light, Dark or Void), Glass, text size and reduce motion; download hours and the install folder; your music service; your game stores, their accounts and notifications, and Steam's offline mode; dictation (a mic in Exo's text boxes that types what you say, on this PC); optional keys and updates.
+One page that floats over the room you were in: appearance (Match Windows, Light, Dark or Void), Glass, text size and reduce motion; download hours and the install folder; your music service; your game stores, their accounts and notifications, and Steam's offline mode; optional keys and updates.
 
 ## How it works
 

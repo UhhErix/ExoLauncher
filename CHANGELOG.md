@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.21.0 — November 1, 2026
+
+- **Noise suppression is built in.** Exo's own AI noise suppression (DeepFilterNet) now ships inside the app, so it cleans your microphone from the first call with nothing to download; if it ever can't start, Windows' noise suppression takes over. _Verified: on screen._
+- **Streams keep playing.** A friend's stream that paused, or stopped in picture-in-picture and never came back, now asks Discord for a fresh picture each time you open or reattach it, so it picks up again within a moment. _Checked in code only._
+- **No false voice warnings.** The "noise suppression couldn't be set up" notice and the red "your mic seems silent" warning no longer show while your mic and noise suppression are working. _Verified: on screen._
+- **Settings has its sidebar again.** Settings lists each room first (Library, Discord, Music) and then Exo's own pages (General, About), and Discord's settings now live there. _Verified: on screen._
+- **Dictation and profiles are gone.** Dictation and Exo profiles are removed; Exo deletes dictation's 670 MB speech model from your PC on its next start. _Checked in code only._
+
 ## 3.20.0 — October 31, 2026
 
 - **Exo sleeps while you play.** With a game running and Exo hidden, its page suspends entirely (no drawing, no timers) and comes back exactly where you left it; if a suspend can't finish or is cancelled, the page simply stays awake. _Checked in code only._

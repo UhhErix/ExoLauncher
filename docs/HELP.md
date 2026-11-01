@@ -14,9 +14,7 @@ To uninstall, open **Windows Settings > Apps > Installed apps**, choose **Exo La
 
 Press **Ctrl+K**, or the Exo mark at the top left, to reach any room, game, action, music control, or Discord DM and server. Ctrl+K brings back your last search, selected, so typing replaces it.
 
-**Dictation:** press the mic in a search box or one of Discord's boxes and talk; a line follows your voice, and **Stop** types what you said where your cursor was. It runs on this PC; nothing you say leaves it. Settings > General > Dictation turns the mic off.
-
-**Voice messages:** in a Discord DM or a channel that allows them, press the handheld mic after dictation's and talk; **Stop** lets you hear it back, then **Send** it or delete it (Escape deletes too). Leaving the Discord room or minimizing Exo stops the recording. In a call, it uses the call's microphone without changing it. Up to 20 minutes, as Discord allows.
+**Voice messages:** in a Discord DM or a channel that allows them, press the handheld mic and talk; **Stop** lets you hear it back, then **Send** it or delete it (Escape deletes too). Leaving the Discord room or minimizing Exo stops the recording. In a call, it uses the call's microphone without changing it. Up to 20 minutes, as Discord allows.
 
 ## Look and feel
 
