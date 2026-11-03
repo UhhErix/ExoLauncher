@@ -7,8 +7,7 @@ name: Discord release announcement
 # stores the new Discord message id as a workflow artifact for the next run.
 # Run manually with dry_run=true to preview the payload built from the latest
 # release, or dry_run=false to perform the same replace.
-# Exo Launcher, Exo Cinema and Exo Browser run this same file: only PRODUCT and
-# APP below differ.
+# PRODUCT and APP below name the app.
 
 on:
   release:
@@ -124,7 +123,7 @@ jobs:
                   avatar += "?v=" + hashlib.sha256(res.read()).hexdigest()[:12]
           except Exception as e:
               warn(f"{avatar} did not load ({e}).")
-          # Exo's family mark (M3 Bracket) beside "Exo": the one in Exo Launcher's repo serves all three.
+          # Exo's mark (M3 Bracket) beside "Exo".
           mark = image("https://raw.githubusercontent.com/UhhErix/ExoLauncher/main/.github/discord/exo-logo-512.png")
           embed = {
               "color": 0x010101,  # Void black; Discord draws 0 as no color
@@ -224,7 +223,7 @@ jobs:
               -o "$RUNNER_TEMP/discord-response.json" -w '%{http_code}' "$@"
           }
           # Discord fetches avatar_url once, as it posts, and a card it couldn't fetch it for keeps
-          # the webhook's default avatar for good (Exo Cinema 1.3.0's did): post that card again.
+          # the webhook's default avatar for good: post that card again.
           for try in 1 2 3; do
             code="$(discord POST "" "wait=true" -H "Content-Type: application/json" --data-binary "@$payload")"
             if [[ "$code" != 2* ]]; then

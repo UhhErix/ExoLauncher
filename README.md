@@ -1,10 +1,10 @@
 <p align="center"><img src="docs/media/logo.png" alt="Exo" width="88"></p>
-<h1 align="center">Exo Launcher 3.21</h1>
+<h1 align="center">Exo Launcher 3.22</h1>
 <p align="center"><strong>Every game store, Discord, your music, your captures and your mouse in one app for Windows 11.</strong></p>
 
 <p align="center">
   <a href="https://github.com/UhhErix/ExoLauncher/releases/latest/download/ExoLauncher-Setup.exe"><strong>Download for Windows 11</strong></a>
-  · <a href="https://github.com/UhhErix/ExoLauncher/releases/tag/v3.21.0">What's new in 3.21</a>
+  · <a href="https://github.com/UhhErix/ExoLauncher/releases/tag/v3.22.0">What's new in 3.22</a>
   · <a href="CHANGELOG.md">Changelog</a>
   · <a href="PRIVACY.md">Privacy</a>
   · <a href="LICENSE">License</a>
@@ -16,11 +16,11 @@
 
 | File | Version | SHA-256 |
 | --- | --- | --- |
-| [ExoLauncher-Setup.exe](https://github.com/UhhErix/ExoLauncher/releases/download/v3.21.0/ExoLauncher-Setup.exe) | 3.21.0 | `ff8898ee3d87fdec2dec232d62cae6b27e7af9b80e86eb1a49fe13bc2c73329b` |
+| [ExoLauncher-Setup.exe](https://github.com/UhhErix/ExoLauncher/releases/download/v3.22.0/ExoLauncher-Setup.exe) | 3.22.0 | `be764828f57a88636883f39851dcea61e9cd5c895721e6f55b3769b3536457df` |
 
 **Requirements:** Windows 11 x64. Installs for your Windows user only, in `%LOCALAPPDATA%\ExoLauncher\app`, with no administrator rights.
 
-**Check your download.** The installer isn't code-signed yet, so Windows SmartScreen may warn the first time (choose **More info**, then **Run anyway**). Before you run it, check that its hash matches the one above and on the [release page](https://github.com/UhhErix/ExoLauncher/releases/tag/v3.21.0):
+**Check your download.** The installer isn't code-signed yet, so Windows SmartScreen may warn the first time (choose **More info**, then **Run anyway**). Before you run it, check that its hash matches the one above and on the [release page](https://github.com/UhhErix/ExoLauncher/releases/tag/v3.22.0):
 
 ```powershell
 Get-FileHash .\ExoLauncher-Setup.exe -Algorithm SHA256
@@ -34,14 +34,14 @@ irm https://raw.githubusercontent.com/UhhErix/ExoLauncher/main/Install-ExoLaunch
 
 > [!WARNING]
 > **Two features carry a risk to your accounts. Read this before you use them.**
-> - **Discord:** Discord's terms don't allow third-party clients. Exo's Discord room is its own client, so signing in to it is at your own risk.
+> - **Discord:** Discord's terms don't allow third-party clients. Exo's Home room is its own Discord client, so signing in to it is at your own risk.
 > - **Anti-cheat:** changing upscaler files in a game with anti-cheat can get that account banned. Exo asks you for each such game before it changes anything, and never touches Riot games.
 
 ## Install
 
 1. Download **ExoLauncher-Setup.exe** (above) and check its hash.
 2. Run it, choose **Install**, then **Launch Exo**. First run walks you through your game stores, music, Discord and captures, offers to remove the apps Exo replaces, and ends with Best settings for this PC.
-3. Exo finds your games and starts your music service out of sight. When a new version is out, Exo asks once as it opens, before you start, never in the middle of a game; **Settings > About** shows it too.
+3. Exo finds your games and starts your music service out of sight. When a new version is out, Exo asks once as it opens, before you start, never in the middle of a game; **Settings > General** shows it too.
 
 ## What it does
 
@@ -58,40 +58,36 @@ A gaming PC usually runs Steam, the Epic Games Launcher, Riot Client, Discord, S
   - Store apps running in the background stay hidden and out of the tray. While Steam, Epic, EA, Ubisoft, GOG Galaxy or Battle.net sits hidden, Exo hands the memory its built-in browser holds back to Windows. On a test PC, Steam's browser helpers went from about 280 MB to under 80 MB.
   - Behind a game, Exo drops to low priority and Windows efficiency mode, and its rooms stop all work.
 - **Quick:** rooms switch instantly because their apps are already running. In our testing, Store pages open in about half a second, and the Library is ready about half a second after the window appears (on a 108-game library).
-- **Your look:** Light, Dark or Void (pure black, for OLED), or matched to Windows. The same layout at 1080p, 1440p and 4K, only sharper.
+- **Your look:** pure black and Liquid Glass. The same layout at 1080p, 1440p and 4K, only sharper.
 - **No account, no ads, no analytics, no telemetry.** Your library, settings and keys stay on your PC.
 
 ## The rooms
 
 ### Library
 
-Every game you own, from every store, in one grid, plus the games your Steam Family shares; a game that isn't installed carries a small mark. **Continue** keeps the games you're playing one click from Play, and **Friends are playing** shows the games your Discord friends are in right now. Sort by name, installed first, last launched, time played, size or store. Refresh reads every store again, measures sizes, reads achievements and fetches art.
+Every game you own, from every store, in one grid, plus the games your Steam Family shares; a game that isn't installed carries a small mark. **Continue** keeps the games you're playing one click from Play. Sort by name, installed first, last launched, time played, size or store. Refresh reads every store again, measures sizes, reads achievements and fetches art.
 
-- **Folders:** + > New folder, name it, pick a color and tick its games. Right-click a game to add it to a folder. A folder is also how you keep favorites.
-- **Add any game:** + > Add a game picks a game's own .exe; Find a game in a folder finds it for you.
-- **More than one account:** switch between Steam accounts, or Riot accounts for League and VALORANT, in Settings > Accounts and keys.
+- **Folders:** More > New folder, name it, pick a color and tick its games. Right-click a game to add it to a folder. A folder is also how you keep favorites.
+- **Add any game:** More > Add a game picks a game's own .exe; Find a game in a folder finds it for you.
+- **More than one account:** switch between Steam accounts, or Riot accounts for League and VALORANT, in Settings > Library.
 
 ![A game page: play, time played, last launched, size, Properties, upscalers and shaders](docs/media/game.jpg)
 
-A game's page shows where it's from, time played, last launched, size and achievements, with Play, Uninstall (Remove for a game you added) and Properties. Rows for its upscalers and shaders open their PC page, and HDR sets whether the game plays in HDR.
+A game's page shows where it's from, time played, last launched, size and achievements, with Play and Properties, which holds Uninstall (Remove for a game you added). Rows for its upscalers and shaders open their PC page, and HDR sets whether the game plays in HDR.
 
 **Properties** has the choices that are yours: launch options, language, betas, checking files, moving the game to another drive, and DLC and optional content (such as a high-resolution texture pack), with the space each takes or frees shown first. Artwork replaces the cover with your own picture. What has one right answer Exo sets for each Steam game itself: cloud saves on, updates kept, the Steam overlay only where the game needs it (Steam purchases, playing online with friends, Remote Play Together, Steam Input) and Steam Input from the game's controller support.
 
 ### PC
 
-![The PC room: your hardware, drivers, network, drives, apps and shaders on one page](docs/media/gpu.jpg)
+![The PC room: your hardware, Best settings, updates and shaders on one page](docs/media/pc.jpg)
 
-One page: This PC with its parts, Best settings in green beside its name (or what's still missing in red) and a check for Upscalers, then Network, Drives (which clean themselves), Apps (the uninstaller and game runtimes), every driver in one list, and Shaders. Display opens as a floating menu, with your graphics card's control panel.
+One page: This PC with its parts, its network and drives among them, with Best settings in green on its line (or what's still missing in red), Upscalers and Apps (the uninstaller), then every driver and game runtime in one list, and Shaders. Your graphics card, screen and motherboard each open as a floating menu.
 
 - **Driver and profile:** NVIDIA's newest driver for your card, checked at most once an hour and installed clean, driver only, with no NVIDIA app, telemetry, PhysX or HDMI audio (AMD's or Intel's newest on Radeon or Intel graphics). Exo's NVIDIA driver profile for the lowest latency, with or without G-SYNC.
 - **HDR:** on only while a game with real HDR runs, with SDR drawn at gamma 2.2 so blacks stay black.
 - **Display:** the refresh rates and colors your screen really takes, scaling and **Override the scaling set by games**, color from brightness to hue, and RTX Video Super Resolution and HDR. A change applies and stays.
 
-![PC > Display: refresh rate, output color, scaling and its override, color and RTX Video](docs/media/gpu-display.jpg)
-
 ### Upscalers
-
-![PC > Upscalers: every installed game's DLSS, FSR and XeSS, here all on the newest release](docs/media/upscalers.jpg)
 
 PC > Upscalers lists every installed game that can get newer DLSS, FSR or XeSS and updates them all at once.
 
@@ -101,8 +97,6 @@ PC > Upscalers lists every installed game that can get newer DLSS, FSR or XeSS a
 
 ### Shaders
 
-![PC > Shaders: which games are compiled for your driver, with Refresh and Compile](docs/media/shaders.jpg)
-
 Exo Shaders precompiles each game's shaders for your current graphics driver, so a game doesn't stutter the first time it meets a new effect. It shows which games are compiled, keeps a queue, and skips a game Windows already compiled for your card. After a driver update, Refresh shows the games to compile again. It runs only when you press Compile or Refresh, keeps its memory use down while it works, and stops soon after.
 
 ### Store
@@ -111,24 +105,22 @@ Exo Shaders precompiles each game's shaders for your current graphics driver, so
 
 Steam's new and upcoming games, new and trending, most anticipated, top sellers, sales and most wishlisted, shelves picked from what you play, and search, with prices in your currency and review scores. Wishlist a game and Exo tells you when it goes on sale.
 
-![A Store game page: trailers, buying options, description, details and system requirements](docs/media/store-game.jpg)
-
 Every game's page has the same one-screen layout: trailers and screenshots with details on the left; the logo, each official store's price, the description and system requirements on the right, with your PC's parts beside them and a check or a cross. Get opens the store's own app. Prices come from official stores only.
 
-### Discord
+### Home
 
-![The Discord room: Exo's own Discord client (names, messages and pictures blurred in this picture)](docs/media/discord.jpg)
+![The Home room: Exo's own Discord client, with friends' games first (sample names in this picture)](docs/media/home.jpg)
 
 > [!NOTE]
 > Discord's terms don't allow third-party clients. Using this room is at your own risk.
 
-Exo's own Discord client, laid out like Discord: servers, DMs, Friends, forums, polls, app commands, GIFs, stickers and emoji with favorites, full profiles, Discord's Shop, group DMs, bookmarks and reminders, message requests, and moderation and every page of Server Settings where you have permission. You sign in with a QR code from Discord's phone app, never a password. Drag servers to reorder them or make folders, and an invite link joins the server right here. Notifications follow Discord's own rules and clear when you read the chat anywhere, and the unread count shows on the Discord tab and Exo's taskbar button. The names, messages and pictures in this picture are blurred for privacy.
+Exo's own Discord client, in Exo's own shape: what your friends are playing first (and, if you turn on Share my games, what you opened from Exo, as your own Discord activity), then Messages and Servers: DMs, friends, forums, polls, app commands, GIFs, stickers and emoji with favorites, full profiles, Discord's Shop, group DMs, bookmarks and reminders, message requests, and moderation and every page of Server Settings where you have permission. You sign in with a QR code from Discord's phone app, never a password. Drag servers to reorder them or make folders, and an invite link joins the server right here. Notifications follow Discord's own rules and clear when you read the chat anywhere, and the unread count shows on the Discord tab and Exo's taskbar button. The names, messages and pictures in this picture are blurred for privacy.
 
 **Calls** are end-to-end encrypted, with camera and Go Live screen share, in servers and DMs. Noise suppression removes fans, keys and room noise from your voice; echo cancellation lets you call on speakers; and Noise Suppression for Others can clean up everyone else's voice too.
 
 ### Music
 
-![The Music room: Exo's own player, here with Apple Music (your library blurred in this picture)](docs/media/music.jpg)
+![The Music room: Exo's own player, here with Spotify](docs/media/music.jpg)
 
 Exo's own player for Spotify, Apple Music and YouTube Music:
 
@@ -158,9 +150,7 @@ Your mouse's page is **Exo Mouse**, which talks to your mouse directly over USB,
 
 ### Settings
 
-![Settings: a floating panel over the room you were in](docs/media/settings.jpg)
-
-One page that floats over the room you were in: appearance (Match Windows, Light, Dark or Void), Glass, text size and reduce motion; download hours and the install folder; your music service; your game stores, their accounts and notifications, and Steam's offline mode; optional keys and updates.
+One page that floats over the room you were in: text size and reduce motion; download hours and the install folder; your music service; your game stores, their accounts and notifications, and Steam's offline mode; optional keys and updates.
 
 ## How it works
 
@@ -201,11 +191,6 @@ To ask for permission, [open an issue](https://github.com/UhhErix/ExoLauncher/is
 Every bundled library and tool is listed in [Third-party notices](THIRD_PARTY_NOTICES.md).
 
 **Not affiliated.** Exo Launcher is independent and not affiliated with or endorsed by Valve, Epic Games, GOG, Riot Games, Microsoft, EA, Ubisoft, Blizzard, Amazon, Discord, Spotify, Apple, Google, NVIDIA, AMD, Intel, OBS Studio or any other company it works with. Their names, logos and game art belong to their owners. Your use of each service stays under that service's own terms.
-
-## Also from Exo
-
-- **[Exo Browser](https://github.com/UhhErix/ExoBrowser)** — private browser with Exo Shield and Exo Vault built in
-- **[Exo Cinema](https://github.com/UhhErix/ExoCinema)** — Jellyfin library with a native mpv player (HDR / Dolby Vision)
 
 ---
 
