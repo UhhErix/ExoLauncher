@@ -1,6 +1,6 @@
 # Third-party notices
 
-Exo Launcher's own code is proprietary (see [LICENSE](LICENSE)). The installer also carries the components below, each under its own license, and Exo downloads a few tools at run time. Nothing here changes those licenses; where a license needs its full text, the text ships next to the component or is linked.
+Exo Launcher's own code is proprietary (see [LICENSE](LICENSE)). The installer also carries the components below, each under its own terms, and Exo downloads a few tools at run time. Nothing here changes those licenses; where a license needs its full text, the text ships next to the component or is linked.
 
 ## Separate programs shipped with Exo
 
@@ -14,8 +14,10 @@ These run as their own programs. Exo talks to them only through messages, and Ex
 | **OBS Studio game capture files** 32.2.2 (`graphics-hook`, `inject-helper`, `get-graphics-offsets`; 32- and 64-bit), OBS Project and contributors, unmodified and signed by OBS Project, LLC, used by Exo Capture only for a game Windows capture gets no picture from | GPL-2.0-or-later | [github.com/obsproject/obs-studio/tree/32.2.2](https://github.com/obsproject/obs-studio/tree/32.2.2) (`plugins/win-capture`) |
 | **Exo Shield** 2026.1026.1812.7226, Exo's blocker, made from [uBlock Origin Lite](https://github.com/uBlockOrigin/uBOL-home) 2026.1026.1812 (Raymond Hill and contributors) and [HaGeZi](https://github.com/hagezi/dns-blocklists)'s Multi PRO DNS blocklist, loaded into the embedded music browser | GPL-3.0 (full text in the extension's `LICENSE.txt`, its changes in `NOTICE.txt`) | [github.com/UhhErix/exo-shield](https://github.com/UhhErix/exo-shield) |
 | **SponsorBlock** 6.1.7, Ajay Ramachandran and contributors, unmodified, loaded into the embedded music browser for YouTube Music | GPL-3.0 | [github.com/ajayyy/SponsorBlock/tree/6.1.7](https://github.com/ajayyy/SponsorBlock/tree/6.1.7) |
+| **Lucid** 6.0.4 (`addons\lucid\Lucid.exe`; the headphone EQ on your audio's page), by [tekkusai](https://github.com/tekkusai/Lucid), its file marked Copyright 2026 Kurosun LLC; unmodified. Thank you, tekkusai | No license is listed. Shipped with the author's permission, given by direct message, with credit here, in the README and in the app | Not published; its releases are at [github.com/tekkusai/Lucid](https://github.com/tekkusai/Lucid) |
+| **RyzenSMU** PawnIO module 0.2.11 (`Assets\pawnio\RyzenSMU.bin`; Auto tune on a Ryzen), by namazso, signed and unmodified. The PawnIO driver it loads into is not part of Exo: you install it yourself from [pawnio.eu](https://pawnio.eu) | LGPL-2.1 | [github.com/namazso/PawnIO.Modules/releases/tag/0.2.11](https://github.com/namazso/PawnIO.Modules/releases/tag/0.2.11) |
 
-The source for every build of these programs that Exo ships is published at the links above, at the version in that release.
+The source for every build of these programs that Exo ships, Lucid aside, is published at the links above, at the version in that release. Lucid's file carries the .NET 8 runtime and WPF (MIT), NAudio (MIT), Hardcodet NotifyIcon (CPOL) and the Inter typeface (SIL OFL). On a PC without it, Lucid downloads Equalizer APO (GPL-2.0) from its author's repository when you press Set up; Exo doesn't ship it.
 
 ## Libraries and assets inside Exo
 
@@ -39,6 +41,7 @@ The source for every build of these programs that Exo ships is published at the 
 | clsx | 2.1.1 | MIT |
 | qrcode-generator (Kazuhiko Arase), the Discord sign-in code | 2.0.4 | MIT |
 | lottie-web (Airbnb), Discord's animated stickers | 5.13.0 | MIT |
+| [Skullet](https://skullet.lochie.me) (Lochie Axon), the skeletons of what is on its way | 0.0.3 | MIT |
 | hls.js | 1.7.4 | Apache-2.0 |
 | dash.js | 5.2.1 | BSD-3-Clause |
 | Geist font (Vercel and Basement Studio), the variable fonts: Geist-Variable.woff2 and Geist-Italic-Variable.woff2 in the UI (`ui/public/fonts`) and Exo Mouse, Geist-Variable.ttf in the app | 1.9.0 | SIL Open Font License 1.1 |
@@ -63,6 +66,8 @@ Exo does not ship these in its installer file; it downloads a fixed release and 
 | [gogdl](https://github.com/Heroic-Games-Launcher/heroic-gogdl) | GOG library, installs and launches | GPL-3.0 |
 | [Nile](https://github.com/imLinguin/nile) | Amazon Games library, installs and launches | GPL-3.0 |
 | [TitaNet-small](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/nemo/models/titanet_small) (NVIDIA NeMo) as sherpa-onnx publishes it in ONNX: `titanet_small.onnx`, from [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx)'s release, checked against its size and SHA-256 | Only My Voice in Discord calls | CC-BY-4.0 |
+| [whisper.cpp](https://github.com/ggml-org/whisper.cpp) (Georgi Gerganov and the ggml authors) b5454, the build of v1.9.5: `whisper-cli.exe` and its libraries (`whisper.dll`, `ggml.dll` and the ggml CPU builds), from its release, unpacked and each file checked against its size and SHA-256; it runs as its own program on this PC, only when you turn on Dictation or Captions | Dictation in Notes and captions on clips | MIT |
+| [Whisper](https://github.com/openai/whisper) "base" (OpenAI), multilingual, as whisper.cpp's ggml quantised file `ggml-base-q5_1.bin` from [ggerganov/whisper.cpp](https://huggingface.co/ggerganov/whisper.cpp) on Hugging Face, at a pinned commit, checked against its size and SHA-256 | Dictation in Notes and captions on clips | MIT |
 | NVIDIA DLSS, AMD FidelityFX / FSR, Intel XeSS files, from each vendor's own GitHub release | Upscaler updates, only for files a game already ships | DLSS: [NVIDIA RTX SDKs License](https://github.com/NVIDIA/DLSS/blob/main/LICENSE.txt); FidelityFX / FSR: [AMD's FidelityFX SDK license](https://github.com/GPUOpen-LibrariesAndSDKs/FidelityFX-SDK/blob/main/docs/license.md); XeSS: [Intel Simplified Software License](https://github.com/intel/xess/blob/main/LICENSE.txt) (October 2022), in full below |
 | [MFG Unlocker](https://github.com/dashdogy/MFG-Unlocker) (dashdogy), its newest release: `MFGUnlocker.dll` | NVIDIA's own frame generation on GeForce RTX 20 and 30, and 3x and 4x on RTX 40, only in a game you turn it on for, placed in that game's folder | MIT; it embeds programs derived from Intel's XeSS SDK under Intel's terms, and Dear ImGui, MinHook and Ultimate ASI Loader under theirs |
 | [DLSSG for SM86](https://github.com/sdli1995/dlssg_for_sm86), its newest release: `version.dll`, `dlssg_sm86.ini`, and the `dlssg_sm86` folder | DLSS frame generation on GeForce RTX 20 and 30, only in a game you turn it on for that already has DLSS frame generation, placed beside that game's program | Source: MIT. The release also carries NVIDIA's unmodified `nvngx_dlssg.dll` under NVIDIA's terms, and kernel images the project ships only as binaries |

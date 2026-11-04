@@ -1,10 +1,10 @@
 <p align="center"><img src="docs/media/logo.png" alt="Exo" width="88"></p>
-<h1 align="center">Exo Launcher 3.22</h1>
+<h1 align="center">Exo Launcher 3.23</h1>
 <p align="center"><strong>Every game store, Discord, your music, your captures and your mouse in one app for Windows 11.</strong></p>
 
 <p align="center">
   <a href="https://github.com/UhhErix/ExoLauncher/releases/latest/download/ExoLauncher-Setup.exe"><strong>Download for Windows 11</strong></a>
-  · <a href="https://github.com/UhhErix/ExoLauncher/releases/tag/v3.22.0">What's new in 3.22</a>
+  · <a href="https://github.com/UhhErix/ExoLauncher/releases/tag/v3.23.0">What's new in 3.23</a>
   · <a href="CHANGELOG.md">Changelog</a>
   · <a href="PRIVACY.md">Privacy</a>
   · <a href="LICENSE">License</a>
@@ -16,11 +16,11 @@
 
 | File | Version | SHA-256 |
 | --- | --- | --- |
-| [ExoLauncher-Setup.exe](https://github.com/UhhErix/ExoLauncher/releases/download/v3.22.0/ExoLauncher-Setup.exe) | 3.22.0 | `be764828f57a88636883f39851dcea61e9cd5c895721e6f55b3769b3536457df` |
+| [ExoLauncher-Setup.exe](https://github.com/UhhErix/ExoLauncher/releases/download/v3.23.0/ExoLauncher-Setup.exe) | 3.23.0 | `35a5ad1d219f70bfdd70a1945cbf184a25916aa84dfd7c7fdefc7018318de52d` |
 
 **Requirements:** Windows 11 x64. Installs for your Windows user only, in `%LOCALAPPDATA%\ExoLauncher\app`, with no administrator rights.
 
-**Check your download.** The installer isn't code-signed yet, so Windows SmartScreen may warn the first time (choose **More info**, then **Run anyway**). Before you run it, check that its hash matches the one above and on the [release page](https://github.com/UhhErix/ExoLauncher/releases/tag/v3.22.0):
+**Check your download.** The installer isn't code-signed yet, so Windows SmartScreen may warn the first time (choose **More info**, then **Run anyway**). Before you run it, check that its hash matches the one above and on the [release page](https://github.com/UhhErix/ExoLauncher/releases/tag/v3.23.0):
 
 ```powershell
 Get-FileHash .\ExoLauncher-Setup.exe -Algorithm SHA256
@@ -34,7 +34,7 @@ irm https://raw.githubusercontent.com/UhhErix/ExoLauncher/main/Install-ExoLaunch
 
 > [!WARNING]
 > **Two features carry a risk to your accounts. Read this before you use them.**
-> - **Discord:** Discord's terms don't allow third-party clients. Exo's Home room is its own Discord client, so signing in to it is at your own risk.
+> - **Discord:** Discord's terms don't allow third-party clients. Exo's Discord room is its own Discord client, so signing in to it is at your own risk.
 > - **Anti-cheat:** changing upscaler files in a game with anti-cheat can get that account banned. Exo asks you for each such game before it changes anything, and never touches Riot games.
 
 ## Install
@@ -53,7 +53,6 @@ A gaming PC usually runs Steam, the Epic Games Launcher, Riot Client, Discord, S
 - **Game-aware:** downloads pause while you play, your mouse switches to the game's profile, instant replay runs, and Exo goes quiet behind the game.
 - **Better games:** DLSS, FSR (FSR 4 included) and XeSS updated with the vendors' own signed files, with one-click restore; NVIDIA driver profiles; and shader precompiling to cut stutter.
 - **Lighter in the background:**
-  - Spotify starts hidden behind Exo and stops drawing while you can't see it.
   - A paused music player is frozen until you reach for it.
   - Store apps running in the background stay hidden and out of the tray. While Steam, Epic, EA, Ubisoft, GOG Galaxy or Battle.net sits hidden, Exo hands the memory its built-in browser holds back to Windows. On a test PC, Steam's browser helpers went from about 280 MB to under 80 MB.
   - Behind a game, Exo drops to low priority and Windows efficiency mode, and its rooms stop all work.
@@ -107,14 +106,14 @@ Steam's new and upcoming games, new and trending, most anticipated, top sellers,
 
 Every game's page has the same one-screen layout: trailers and screenshots with details on the left; the logo, each official store's price, the description and system requirements on the right, with your PC's parts beside them and a check or a cross. Get opens the store's own app. Prices come from official stores only.
 
-### Home
+### Discord
 
-![The Home room: Exo's own Discord client, with friends' games first (sample names in this picture)](docs/media/home.jpg)
+![The Discord room: Exo's own Discord client, with friends' games first (sample names in this picture)](docs/media/home.jpg)
 
 > [!NOTE]
 > Discord's terms don't allow third-party clients. Using this room is at your own risk.
 
-Exo's own Discord client, in Exo's own shape: what your friends are playing first (and, if you turn on Share my games, what you opened from Exo, as your own Discord activity), then Messages and Servers: DMs, friends, forums, polls, app commands, GIFs, stickers and emoji with favorites, full profiles, Discord's Shop, group DMs, bookmarks and reminders, message requests, and moderation and every page of Server Settings where you have permission. You sign in with a QR code from Discord's phone app, never a password. Drag servers to reorder them or make folders, and an invite link joins the server right here. Notifications follow Discord's own rules and clear when you read the chat anywhere, and the unread count shows on the Discord tab and Exo's taskbar button. The names, messages and pictures in this picture are blurred for privacy.
+Exo's own Discord client, in Exo's own shape: what your friends are playing first (and friends who use Exo see what you opened from Exo, sealed and off Discord, unless you turn that off), then Messages and Servers: DMs, friends, forums, polls, app commands, GIFs, stickers and emoji with favorites, full profiles, Discord's Shop, group DMs, bookmarks and reminders, message requests, and moderation and every page of Server Settings where you have permission. You sign in with a QR code from Discord's phone app, never a password. Drag servers to reorder them or make folders, and an invite link joins the server right here. Notifications follow Discord's own rules and clear when you read the chat anywhere, and the unread count shows on the Discord tab and Exo's taskbar button. The names, messages and pictures in this picture are blurred for privacy.
 
 **Calls** are end-to-end encrypted, with camera and Go Live screen share, in servers and DMs. Noise suppression removes fans, keys and room noise from your voice; echo cancellation lets you call on speakers; and Noise Suppression for Others can clean up everyone else's voice too.
 
@@ -141,7 +140,7 @@ The Capture button in the top bar, or its keys, saves an instant replay of the l
 
 Devices shows what you plug in, each with the maker's own picture of that model: your mouse, keyboard, what you listen on and your controller.
 
-- **Headphones:** Windows can't tell which pair is on the jack, so you pick yours from the hundreds Lucid knows. Its page holds Lucid (it switches your headphones' EQ when your device or game changes), Game Mode and Night Shift. Lucid is made by [tekkusai](https://github.com/tekkusai/Lucid).
+- **Headphones:** Windows can't tell which pair is on the jack, so you pick yours from the hundreds Lucid knows. Its page holds Lucid (it switches your headphones' EQ when your device or game changes), Game Mode and Night Shift. Built on [Lucid by tekkusai](https://github.com/tekkusai/Lucid), which comes inside Exo with his permission, so there's nothing separate to download.
 - **Controllers:** a DualSense, DualSense Edge, DualShock 4, Xbox controller or other gamepad opens the Controller Lab: live sticks and triggers, a stick test and its measured polling rate. A DualSense or Edge calibrates its sticks with its own routine, an Edge's four profiles (stick curves, trigger ranges, back buttons) are edited here and stored in the controller, and each Steam game gets Steam Input only where it needs it: one that reads the controller itself skips it.
 - **USB ports:** each device's page says which USB it's on, and Devices says when a device would gain from one of the processor's own ports.
 - **Keyboards** show as Coming soon until Exo sets them up.
@@ -158,13 +157,13 @@ Exo is a native Windows app (WinUI 3 and .NET) with its interface drawn in an em
 
 - **Stores:** Exo reads what each store already keeps on your PC (Steam's library and manifests, Riot Client's records, the Xbox app's game configs and more) and launches through each store's own client. Epic, GOG and Amazon run through the open-source tools Legendary, gogdl and Nile, and a game Epic's own launcher installed updates in that launcher, out of sight. You sign in on each store's own page. Downloads, ownership, DRM and anti-cheat stay the stores' job.
 - **Discord:** Exo's own client. No Discord app to install.
-- **Music:** each service plays the music itself, hidden behind Exo: Spotify's desktop app, and Apple Music's and YouTube Music's web players. Exo drives them through their own interfaces and draws what you see, so your account, downloads and sound quality are the service's own.
+- **Music:** each service plays the music itself, hidden behind Exo in its own web player: Spotify, Apple Music and YouTube Music. Exo drives them through their own interfaces and draws what you see, so your account, downloads and sound quality are the service's own.
 - **Captures, Devices and Shaders:** separate programs that ship with Exo and talk to it only through messages (Exo Mouse and Exo Shaders are open source). Exo Capture records on the graphics card's encoder, Exo Mouse talks to your mouse over USB, and Exo Shaders precompiles shaders for your driver.
 - **Memory:** a room you can't see stops drawing, has its memory trimmed and runs in efficiency mode. Nothing a game, download or call needs is ever closed.
 
 ## Privacy and safety
 
-- **No Exo account, no ads, no analytics, no telemetry.** Exo's own servers send its updates, and its call relay passes what you play between the Exo apps in one Discord call, end-to-end encrypted so it can't read it. Your library, settings, covers, play time and keys stay in `%LocalAppData%\ExoLauncher`, and your captures in your Videos folder. Optional keys and your Discord sign-in are encrypted with Windows.
+- **No Exo account, no ads, no analytics, no telemetry.** Exo's own servers send its updates, and its relay passes what you play between the Exo apps in one Discord call, and which game you opened from Exo to friends who use Exo (on by default, off in Settings › Discord › Privacy), end-to-end encrypted so it can't read it. Your library, settings, covers, play time and keys stay in `%LocalAppData%\ExoLauncher`, and your captures in your Videos folder. Optional keys and your Discord sign-in are encrypted with Windows.
 - **Your sign-ins stay with each service.** You sign in on the store's or service's own page or window, and to Discord with your phone. Exo never sees your passwords.
 - **What leaves your PC** is only what a feature needs: store lookups, cover art, Store pages, prices, driver and upscaler releases, the update check, and what you do in Discord and your music service. The [privacy policy](PRIVACY.md) lists every destination and what is sent.
 - **Account risks:** see the warning under [Download](#download).

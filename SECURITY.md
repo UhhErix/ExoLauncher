@@ -15,7 +15,6 @@
 
 - Application logs redact authorization/session material, passwords, email, provider/store tokens, store-native ids, friend-id lists, and account/user ids.
 - Optional keys, the Riot ID, the Xbox sign-in's refresh token (`xbox-signin.bin`, sent only to Microsoft's sign-in) and the Discord sign-in (`DiscordToken`, sent only to Discord's own hosts, never to the UI) are current-user DPAPI blobs (`ExoDpapi`) whose file DACL `SecretFileAcl` best-effort restricts to the current user and SYSTEM. Same-user malware can still read them; DPAPI is not an application sandbox.
-- Spotify, which Exo hosts, is driven over a private DevTools pipe (`--remote-debugging-pipe`, `SpotifyDevTools`), never a port: Exo holds both ends and Spotify inherits only those two handles, so no other program can find or drive Spotify's signed-in page. In 3.5.0 and earlier it was a random loopback port, which another program running as the user could read from Spotify's command line and use.
 - Logs also redact secrets logged with no label: three-part tokens (JWT, Discord) and long mixed-case runs (OAuth access tokens). Single-case hex such as download hashes stays readable.
 
 ## Anti-cheat safe (always)
