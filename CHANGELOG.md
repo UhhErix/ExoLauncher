@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.24.1 — November 5, 2026
+
+- **Discord looks like Discord.** The room now follows the official app's sizes: the rail, the sidebar with Find or start a conversation, Friends and Shop, Direct Messages, a server's channels and voice members, the people with their counts, the title line's buttons, messages, the message box, the profile panel and the Friends page with Active Now. Your card lines up across the rail and sidebar with your microphone and speaker menus, and the Inbox no longer sits on the search. _Verified: on screen._
+
 ## 3.24.0 — November 5, 2026
 
 - **Tabler icons, everywhere.** Every icon in Exo is now Tabler's (tabler.io/icons, version 3.50): light outline icons, each chosen to fit what it does, with solid play, pause and skip, in place of the hand-drawn set. _Checked in code only._
