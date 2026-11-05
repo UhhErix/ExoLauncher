@@ -1,6 +1,6 @@
 # Exo Launcher privacy statement
 
-**Exo Launcher is local-first. It has no Exo account, no ads, no analytics and no telemetry.**
+**Exo Launcher is local-first. It has no Exo account, no ads, no analytics and no usage tracking. It sends diagnostic reports about crashes, freezes and failures, on by default; see Other network requests.**
 
 Your library, installs, updates, game launches and settings work offline. Exo has no server of its own that they depend on.
 
@@ -132,10 +132,12 @@ Friends who use Exo see the game you opened from Exo on their Home, and Discord 
 
 ## Other network requests
 
+An unhandled crash (an error that closes or breaks Exo) is saved on your PC in a pending report file and sent once, on the next start, under the same daily limits and scrubbing as every other report. Copying a log is unchanged.
+
 | Destination | What is sent | When |
 | --- | --- | --- |
 | Exo's update address (updates.getexo.app, on Exo's Cloudflare account) | Nothing about you: a request for the newest version and, when a newer version is out, for its SHA-256, its What's New list and the update download, which the address sends from Exo's own copy on Cloudflare (from GitHub only in the minutes before a new release's copy is there). Also a plain request for Exo's signed list of driver and firmware versions with known problems, which Exo checks against its own key and uses to hold those versions back; it names no device, driver or game of yours. Your IP address reaches it while it answers; it keeps no logs and stores nothing | When Exo starts, and when you press **Check for updates**. The download happens only when you press **Update now** or **Install update**. The driver list at most once a day, when PC › Drivers or the graphics driver row is read. Update checks cannot be turned off. |
-| Crash reports, only when you turn on Send crash reports (reports.getexo.app, on Exo's Cloudflare account) | Only when you copy an error's log with Send crash reports on: one report of that error, with the app and its version, your Windows build, the error's type and a log excerpt. Paths, URLs (with their hosts and queries), host and machine names, IP addresses, emails, ids and tokens are taken out on your PC first; Settings › General › Send crash reports shows the exact text before you turn it on. The service keeps no IP address, user name or id, and deletes reports after 30 days | Off until you turn it on. Nothing is sent without it. |
+| Crash, freeze and error reports, by default (reports.getexo.app, on Exo's Cloudflare account) | One report of an error, sent when it happens: Exo's window or page stops answering for more than 5 seconds while Exo is visible (a freeze); a WebView2 browser process exits; Discord's connection or voice fails 5 times in a row; Exo Capture exits with an error; a store launch or install fails; an update fails; or you copy an error's log. Each holds the Exo version, your Windows build (numbers only), the error's type and a log excerpt of at most 8 KB. Paths, URLs (with their hosts and queries), host and machine names, user names, IP addresses, emails, ids and tokens are taken out on your PC first, and so are Discord ids and names, game titles from your library and account names. Nothing else is sent: no IP address is stored, and no account, Discord, Steam or other id and no install id. The service keeps each report for 30 days, then deletes it. A PC sends at most one report of the same error type and cause per UTC day, and five per UTC day in all | On by default. There is no switch to turn it off. To stop these reports, block reports.getexo.app in a firewall. |
 | GitHub (ExoLauncher releases) | The files of a newer version (its SHA-256, What's New list and the update download) only in the minutes before Exo's own copy of a new release is there, and the version lookup only when the address doesn't answer | When Exo starts, and when you press **Check for updates**. The download happens only when you press **Update now** or **Install update**. Update checks cannot be turned off. |
 | GitHub (Legendary, gogdl and Nile releases, and NVIDIA's TitaNet voice model from sherpa-onnx's releases) | Download of a fixed version, checked against its SHA-256; nothing about you is sent | When Exo installs: its setup fetches them all (about 570 MB). After Exo starts, any that is missing or that an update changed, while downloads aren't paused; a feature that needs one sooner fetches it then |
 | Dictation and captions' speech model, only when you turn them on (whisper.cpp's release on GitHub, and OpenAI's Whisper model from Hugging Face: huggingface.co and the hf.co servers it sends the file from) | A request for one fixed file from each (whisper.cpp's release b5454, and the model at a pinned commit), checked against its SHA-256; nothing about you is sent, and nothing you say or record ever is | Only when you press Get in Captures settings › Speech (about 66 MB), once; Exo never fetches it by itself |
@@ -189,11 +191,11 @@ Exo writes a diagnostic log to `%LocalAppData%\ExoLauncher\logs\app.log`. It hol
 - errors from the app's interface;
 - crash details.
 
-Before writing, Exo removes things that look like tokens, passwords, keys, account or store ids, and email addresses. **Logs never leave your PC.** Exo does not upload them. **Open logs**, offered when part of Exo stops, only opens the folder. If you share a log for support, check it first.
+Before writing, Exo removes things that look like tokens, passwords, keys, account or store ids, and email addresses. **The log stays on your PC.** Exo does not upload it, except the scrubbed excerpt (at most 8 KB) that a diagnostic report carries, described in **Other network requests**. The previous run's log is kept as `app.log.1`. **Open logs**, offered when part of Exo stops, only opens the folder. If you share a log for support, check it first.
 
 ## What Exo Launcher does not do
 
-- No ads, analytics or telemetry. Crashes are written to the local log only; a crash report leaves your PC only when you turn on **Send crash reports** and copy an error's log (see **Other network requests**).
+- No ads, no analytics and no usage tracking. Exo sends no usage data. Crashes are written to the local log; diagnostic reports (crashes, freezes and failures, on by default) leave your PC as described in **Other network requests**, scrubbed first.
 - No Exo account, and no online dependency for your library or game actions.
 - No library activity or playtime sent anywhere. The one lasting id is your friend link's public key, one per Discord account on a PC, which goes in your Discord presence. Your online status goes only to Discord (see **Discord**); the game you opened from Exo, and, only if you turn on Share when I'm getting ready, that a game is installing, building its shaders or ready, go only to friends who use Exo, sealed (see **Exo's relay**).
 - No uploading of your library, install folders, playtime history or store sign-ins.

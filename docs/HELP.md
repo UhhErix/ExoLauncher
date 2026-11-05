@@ -104,7 +104,17 @@ For your mouse, plug in a supported mouse or its receiver and open its card. Onl
 
 ## Your data
 
-Everything Exo keeps is in `%LocalAppData%\ExoLauncher`, your captures in your Videos folder and your notes in `Documents\Exo Notes`. Exo has no account, ads, analytics or telemetry. The [privacy policy](../PRIVACY.md) lists every network request.
+Everything Exo keeps is in `%LocalAppData%\ExoLauncher`, your captures in your Videos folder and your notes in `Documents\Exo Notes`. Exo has no account, ads or analytics, and no usage tracking. It does send the crash and error reports described below. The [privacy policy](../PRIVACY.md) lists every network request.
+
+## Crash and error reports
+
+Exo sends a short report when something breaks: a crash, a freeze (Exo stops answering for more than 5 seconds while it is on screen), a WebView2 browser that exits, Discord's connection or voice failing five times in a row, Exo Capture exiting with an error, a store launch or install failing, an update failing, or an error log you copy. These reports are on by default. There is no switch to turn them off, and no preview.
+
+A report holds Exo's version, your Windows build (numbers only), the type of error and a log excerpt of up to 8 KB. Before anything leaves your PC, Exo removes paths, web addresses, machine and user names, IP addresses, emails, ids and tokens, Discord ids and names, game titles from your library and account names. No IP address is stored, and no account, Discord, Steam or other id is stored. The service keeps each report for 30 days, then deletes it. A PC sends at most one report of the same error and cause per UTC day, and five reports per UTC day in all.
+
+**Copy logs** still lets you copy an error's log yourself. Copying it also sends one report of that error, as above. The full log stays in `%LocalAppData%\ExoLauncher\logs\app.log` (the previous run's log is kept as `app.log.1`) and is not sent anywhere unless you send it.
+
+To stop these reports, block reports.getexo.app in your firewall.
 
 ## Report a problem
 

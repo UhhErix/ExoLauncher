@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://github.com/UhhErix/ExoLauncher/releases/latest/download/ExoLauncher-Setup.exe"><strong>Download for Windows 11</strong></a>
-  · <a href="https://github.com/UhhErix/ExoLauncher/releases/tag/v3.24.2">What's new in 3.24</a>
+  · <a href="https://github.com/UhhErix/ExoLauncher/releases/tag/v3.24.3">What's new in 3.24</a>
   · <a href="CHANGELOG.md">Changelog</a>
   · <a href="PRIVACY.md">Privacy</a>
   · <a href="LICENSE">License</a>
@@ -16,11 +16,11 @@
 
 | File | Version | SHA-256 |
 | --- | --- | --- |
-| [ExoLauncher-Setup.exe](https://github.com/UhhErix/ExoLauncher/releases/download/v3.24.2/ExoLauncher-Setup.exe) | 3.24.2 | `8e3145e354e3bdd86f1d6e497d1ce381b0dcc5609ac93d6ae5f6838147033769` |
+| [ExoLauncher-Setup.exe](https://github.com/UhhErix/ExoLauncher/releases/download/v3.24.3/ExoLauncher-Setup.exe) | 3.24.3 | `c83d0fb3f2f813c5e4d71559d626c8384898ae4d0178577ae1054e2e840b3e30` |
 
 **Requirements:** Windows 11 x64. Installs for your Windows user only, in `%LOCALAPPDATA%\ExoLauncher\app`, with no administrator rights.
 
-**Check your download.** The installer isn't code-signed yet, so Windows SmartScreen may warn the first time (choose **More info**, then **Run anyway**). Before you run it, check that its hash matches the one above and on the [release page](https://github.com/UhhErix/ExoLauncher/releases/tag/v3.24.2):
+**Check your download.** The installer isn't code-signed yet, so Windows SmartScreen may warn the first time (choose **More info**, then **Run anyway**). Before you run it, check that its hash matches the one above and on the [release page](https://github.com/UhhErix/ExoLauncher/releases/tag/v3.24.3):
 
 ```powershell
 Get-FileHash .\ExoLauncher-Setup.exe -Algorithm SHA256
@@ -58,7 +58,7 @@ A gaming PC usually runs Steam, the Epic Games Launcher, Riot Client, Discord, S
   - Behind a game, Exo drops to low priority and Windows efficiency mode, and its rooms stop all work.
 - **Quick:** rooms switch instantly because their apps are already running. In our testing, Store pages open in about half a second, and the Library is ready about half a second after the window appears (on a 108-game library).
 - **Your look:** pure black and Liquid Glass. The same layout at 1080p, 1440p and 4K, only sharper.
-- **No account, no ads, no analytics, no telemetry.** Your library, settings and keys stay on your PC.
+- **No account, no ads, no analytics and no usage tracking.** Exo sends diagnostic reports about crashes, freezes and failures, on by default with no switch; PRIVACY.md lists what they hold. Your library, settings and keys stay on your PC.
 
 ## The rooms
 
@@ -163,7 +163,7 @@ Exo is a native Windows app (WinUI 3 and .NET) with its interface drawn in an em
 
 ## Privacy and safety
 
-- **No Exo account, no ads, no analytics, no telemetry.** Exo's own servers send its updates, and its relay passes what you play between the Exo apps in one Discord call, and which game you opened from Exo to friends who use Exo (on by default, off in Settings › Discord › Privacy), end-to-end encrypted so it can't read it. Your library, settings, covers, play time and keys stay in `%LocalAppData%\ExoLauncher`, and your captures in your Videos folder. Optional keys and your Discord sign-in are encrypted with Windows.
+- **No Exo account, no ads, no analytics and no usage tracking.** Exo's own servers send its updates and take its diagnostic reports (crashes, freezes and failures, on by default; scrubbed on your PC first, see PRIVACY.md), and its relay passes what you play between the Exo apps in one Discord call, and which game you opened from Exo to friends who use Exo (on by default, off in Settings › Discord › Privacy), end-to-end encrypted so it can't read it. Your library, settings, covers, play time and keys stay in `%LocalAppData%\ExoLauncher`, and your captures in your Videos folder. Optional keys and your Discord sign-in are encrypted with Windows.
 - **Your sign-ins stay with each service.** You sign in on the store's or service's own page or window, and to Discord with your phone. Exo never sees your passwords.
 - **What leaves your PC** is only what a feature needs: store lookups, cover art, Store pages, prices, driver and upscaler releases, the update check, and what you do in Discord and your music service. The [privacy policy](PRIVACY.md) lists every destination and what is sent.
 - **Account risks:** see the warning under [Download](#download).

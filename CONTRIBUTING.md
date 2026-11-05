@@ -25,7 +25,7 @@ An idea that crosses one of these won't ship.
 
 - Exo never edits a game's executable or touches anti-cheat, never kills a process that is anti-cheat, and never modifies Riot games. The one file change it makes, an upscaler swap, uses the vendor's signed files only, keeps the original, and asks first for a game with anti-cheat.
 - Nothing downloads, installs or elevates without the user's say-so.
-- No ads, analytics, telemetry or tray agents. Every host Exo contacts is listed in [PRIVACY.md](PRIVACY.md).
+- No ads, analytics, usage tracking or tray agents. Every host Exo contacts, including the crash and error reports, is listed in [PRIVACY.md](PRIVACY.md).
 - Exo itself never captures the screen or sends synthetic input; that lives in Exo Capture.
 
 ## Security problems
