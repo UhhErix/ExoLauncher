@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.23.1 — November 5, 2026
+
+- **Spotify loads every time.** If the Spotify app was running, Exo's own Spotify player could fail to load ("Spotify is not answering"). Exo now closes the Spotify app when it starts its player, and ends it if it stays in the tray, so the player always comes up. _Checked in code only._
+
 ## 3.23.0 — November 3, 2026
 
 - **Lucid comes with Exo.** tekkusai's headphone EQ is now inside Exo, with his permission: nothing separate to find or download, no tray icon and no window, and your audio's page is how you run it. Set up says plainly what it will do before it does anything: on a PC without Equalizer APO that's a download, Windows' permission and a restart. Your settings carry over as they are. Lucid's start switch and its status are one row that says what it is doing, with Repair beside the switch (the one button that opens Lucid's own window), and Onboarding's row says it runs out of sight while Exo is open. Turning on Start Lucid with Exo moves you from your own copy to this one and stops yours starting at sign-in, unless yours is newer; your file is left where it is, and Apps > Startup says to remove a sign-in entry for the Lucid that comes with Exo, since Exo starts it. Lucid now closes when Exo closes: what you hear stays, but switching EQ per game waits for Exo. Exo doesn't fetch newer Lucid releases by itself; a newer Lucid comes with a newer Exo. _Checked in code only._
