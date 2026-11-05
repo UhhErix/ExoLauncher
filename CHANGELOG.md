@@ -1,5 +1,17 @@
 # Changelog
 
+## 3.24.2 — November 5, 2026
+- **Setup's Clean up scan starts later, and Apple Music's pages come back faster.** Setup no longer scans for junk as it opens; the scan starts when setup reaches Discord, and Continue waits for it only on the step that leads into Clean up. A music page read in the last 20 seconds shows at once, and any action that changes your library forgets what was read before it. _Checked in code only._
+- **Crash reports are yours to turn on, and off by default.** Settings › General has Send crash reports. Turned on, copying an error's log also sends one scrubbed report of that error to Exo's service: the app's version, your Windows build, the error's type and a log excerpt with paths, links, names and ids taken out on your PC first. Preview shows the exact text before you decide, and nothing is sent while it's off. _Checked in code only._
+- **The call bar has device menus and a quieter stream.** The mic and speakers buttons have a chevron that opens their device menu, and a watched stream shows its controls only while the pointer is over it or a control has focus. _Checked in code only._
+- **The call panel is one piece at the bottom left.** A call's voice row and your user card are one glass panel on the same edges, with a single hairline between them; it grows and shrinks up from its bottom edge as a call starts and ends (Reduce motion: no motion), and the rail and sidebar leave room for it. _Checked in code only._
+- **Captures is leaner, and a clip plays as soon as you open it.** A clip starts on its own with the sound as you last left it (Reduce motion keeps it still). The list drops the game covers, the size on each card and the game's name under a game filter, and its groups sit closer together. With a clip open, Back takes the X's place in the header, and Escape or the mouse's Back button goes back to the list. The top bar's Capture button uses Tabler's capture icon. _Checked in code only._
+- **HDR goes on for the screen your game is on.** While a game with real HDR runs, HDR turns on for the screen its window is on, before the window opens, or for the screen it used last time, and turns back off a few seconds after it closes, so a restart doesn't flash. Nothing switches under a fullscreen game. HDR and the screen's gamma ramp come back after a crash, an update or a power-off. _Checked in code only._
+- **Each game's HDR line says why.** Exo's verdict in plain words: its own settings, what it saw on this PC, PCGamingWiki, or not known yet. _Checked in code only._
+- **HDR for HDR games is on for new installs.** Settings you already saved keep their choice. _Checked in code only._
+- **A screen without HDR says so.** PC > Display shows that the main screen can't show HDR, with no HDR switches. _Checked in code only._
+- **Maximize answers again after a switch.** The Maximize button responds after Exo is activated or restored from the taskbar, where it could stop answering. _Checked in code only._
+
 ## 3.24.1 — November 5, 2026
 
 - **Discord looks like Discord.** The room now follows the official app's sizes: the rail, the sidebar with Find or start a conversation, Friends and Shop, Direct Messages, a server's channels and voice members, the people with their counts, the title line's buttons, messages, the message box, the profile panel and the Friends page with Active Now. Your card lines up across the rail and sidebar with your microphone and speaker menus, and the Inbox no longer sits on the search. _Verified: on screen._
