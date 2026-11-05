@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.24.0 — November 5, 2026
+
+- **Tabler icons, everywhere.** Every icon in Exo is now Tabler's (tabler.io/icons, version 3.50): light outline icons, each chosen to fit what it does, with solid play, pause and skip, in place of the hand-drawn set. _Checked in code only._
+- **Discord is laid out like Discord.** A rail of your servers runs down the left with Home on top, then the sidebar (Find or start a conversation, Friends, Shop and Direct Messages, or a server's channels), the conversation and the people, in Liquid Glass, with Geist and Tabler. Friends is back as its own page with Online, All, Pending and Active Now, your card sits across the foot of the rail and sidebar, and the Inbox is at the top right. The Lobby, the Servers page and Pin to top bar are gone, since the rail holds all your servers. _Checked in code only._
+- **Changelog.** What's New is now the Changelog: Settings › General opens every release, all the way back to 1.0.0. _Checked in code only._
+- **Start maximized.** Settings › General has a Start maximized switch. Off, Exo opens the way you left it, as before; on, it always opens maximized. _Checked in code only._
+- **The FPS counter stays out of games that have their own.** Over a game that draws its own FPS (VALORANT, Counter-Strike, Call of Duty, Fortnite and more), Exo's counter stays off and costs nothing while it would show only the FPS. Add items to it in Settings (frame time, 1% lows, GPU, CPU, memory) and it comes back over those games, since it then shows what theirs can't. _Checked in code only._
+- **Spotify loads, or says why.** If Spotify's player takes longer than 45 seconds to come up (a big library can), Exo reloads it twice and then tells you, in place of loading forever. It waits longer for a slow start, and closes the Spotify app when it starts its own player. _Checked in code only._
+
 ## 3.23.1 — November 5, 2026
 
 - **Spotify loads every time.** If the Spotify app was running, Exo's own Spotify player could fail to load ("Spotify is not answering"). Exo now closes the Spotify app when it starts its player, and ends it if it stays in the tray, so the player always comes up. _Checked in code only._
